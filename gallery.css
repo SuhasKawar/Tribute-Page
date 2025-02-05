@@ -1,0 +1,136 @@
+/* Hero Section */
+.hero {
+    background-color: rgb(174, 145, 3);
+    text-align: center;
+    padding: 80px 20px;
+    color: white;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.hero h1 {
+    font-size: 3em;
+    text-shadow: 2px 2px 5px black;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+/* Gallery Section */
+.gallery-container {
+    max-width: 1200px;
+    margin: 100px auto;
+    padding: 40px;
+    text-align: center;
+}
+
+/* Title Styling */
+.title h2 {
+    color: rgb(174, 145, 3); /* Matching color */
+    font-size: 2.5em;
+    padding-bottom: 30px;
+}
+
+/* Gallery Grid */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: opacity 0.3s ease; /* Smooth fade effect on hover */
+}
+
+/* Info Box */
+.info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    opacity: 0;
+    visibility: hidden;
+    padding: 20px;
+    text-align: center;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.gallery-item:hover .info {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Info Box Text Styling */
+.info h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.info p {
+    font-size: 1.2em;
+    margin: 5px 0;
+}
+
+/* Footer Styling */
+footer {
+    background-color: black; /* Green color */
+    padding: 20px 0;
+    text-align: center;
+    color: white;
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 1.1em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: 1fr 1fr; /* 2 columns for smaller screens */
+    }
+
+    .info h3 {
+        font-size: 1.3em;
+    }
+
+    .info p {
+        font-size: 1em;
+    }
+
+    footer {
+        padding: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery {
+        grid-template-columns: 1fr; /* 1 column for extra small screens */
+    }
+}
