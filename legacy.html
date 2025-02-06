@@ -81,9 +81,37 @@
  
 </div>
 
-        <!-- More testimonials can be added -->
+        
     </div>
 </div>
+
+<!-- Video Section -->
+<div class="legacy-container">
+  <header class="title">
+      <h2>Tribute Video</h2>
+  </header>
+
+  <div class="video-container" onclick="playVideo()">
+      <img src="https://img.youtube.com/vi/bsriCylSmzs/maxresdefault.jpg" alt="Click to Play" id="videoThumbnail" class="video-thumbnail">
+      <iframe id="youtubeVideo" src="https://www.youtube.com/embed/bsriCylSmzs?autoplay=1" frameborder="0" allowfullscreen></iframe>
+
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2025 Tribute Page</p>
+</footer>
+
+<script>
+  function playVideo() {
+      var thumbnail = document.getElementById("videoThumbnail");
+      var video = document.getElementById("youtubeVideo");
+
+      thumbnail.style.display = "none"; // Hide the thumbnail
+      video.src = "https://www.youtube.com/embed/bsriCylSmzs?autoplay=1"; // Replace with actual video ID
+      video.style.display = "block"; // Show the video
+  }
+</script>
 
   <footer>
     <p>&copy; 2025 Tribute Page</p>
